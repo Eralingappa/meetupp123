@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import Header from '../Header'
-import RegisterContext from '../../context/RegisterContext'
+import RegisterContext from '../Context/RegisterContext'
 
 import {
   HomeContainer,
@@ -31,20 +31,20 @@ const Home = props => {
                 <Name>Hello</Name>
                 <Topic> Name to</Topic>
                 <Image
-                  src='https://assets.ccbp.in/frontend/react-js/meetup/meetup-img.png'
-                  alt='meetup'
+                  src="https://assets.ccbp.in/frontend/react-js/meetup/meetup-img.png"
+                  alt="meetup"
                 />
               </HomeContainer>
             ) : (
               <HomeContainer>
                 <HomeHeading>Welocme to Meetup</HomeHeading>
                 <HomePara>Please register for topic </HomePara>
-                <Link to='/register'>
+                <Link to="/register">
                   <Button onClick={OnRegister}>Register</Button>
                 </Link>
                 <Image
-                  src='https://assets.ccbp.in/frontend/react-js/meetup/meetup-img.png'
-                  alt='meetup'
+                  src="https://assets.ccbp.in/frontend/react-js/meetup/meetup-img.png"
+                  alt="meetup"
                 />
               </HomeContainer>
             )}

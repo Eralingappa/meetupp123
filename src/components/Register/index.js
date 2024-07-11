@@ -1,7 +1,6 @@
 import Header from '../Header'
 
-import RegisterContext from '../../context/RegisterContext'
-
+import RegisterContext from '../Context/RegisterContext'
 import {
   RegisterContainer,
   RegisterImg,
@@ -67,25 +66,25 @@ const Register = props => (
           <div>
             <RegisterContainer>
               <RegisterImg
-                src="https://assets.ccbp.in/frontend/react-js/meetup/website-register-img.png"
-                alt="website register"
+                src='https://assets.ccbp.in/frontend/react-js/meetup/website-register-img.png'
+                alt='website register'
               />
 
               <Form onSubmit={submiitRegistration}>
                 <RegisterHeading>Let us join</RegisterHeading>
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor='name'>Name</Label>
                 <InputContainer>
                   <Input
-                    id="name"
+                    id='name'
                     value={name}
-                    type="text"
+                    type='text'
                     onChange={onChangeName}
-                    placeholder="your name"
+                    placeholder='your name'
                   />
                 </InputContainer>
                 <InputContainer>
-                  <Label htmlFor="topic">Topic</Label>
-                  <Select id="topic" value={topic} onChange={onChangeTopic}>
+                  <Label htmlFor='topic'>Topic</Label>
+                  <Select id='topic' value={topic} onChange={onChangeTopic}>
                     {topicsList.map(each => (
                       <option value={each.id} key={each.id}>
                         {each.displayText}
@@ -93,7 +92,7 @@ const Register = props => (
                     ))}
                   </Select>
                 </InputContainer>
-                <RegisterButton type="submit">Register Now</RegisterButton>
+                <RegisterButton type='submit'>Register Now</RegisterButton>
                 {showError === true ? (
                   <ErrorMsg> please enter your name</ErrorMsg>
                 ) : (
