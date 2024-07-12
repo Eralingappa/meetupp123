@@ -28,8 +28,8 @@ const Home = props => {
             <Header />
             {isRegistered === true ? (
               <HomeContainer>
-                <Name>Hello</Name>
-                <Topic> Name to</Topic>
+                <Name>Hello{name}</Name>
+                <Topic> Welcome to{topic}</Topic>
                 <Image
                   src="https://assets.ccbp.in/frontend/react-js/meetup/meetup-img.png"
                   alt="meetup"
@@ -37,8 +37,8 @@ const Home = props => {
               </HomeContainer>
             ) : (
               <HomeContainer>
-                <HomeHeading>Welocme to Meetup</HomeHeading>
-                <HomePara>Please register for topic </HomePara>
+                <HomeHeading>Welcome to Meetup</HomeHeading>
+                <HomePara>Please register for the topic</HomePara>
                 <Link to="/register">
                   <Button onClick={OnRegister}>Register</Button>
                 </Link>

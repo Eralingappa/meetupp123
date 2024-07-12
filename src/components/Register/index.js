@@ -9,9 +9,11 @@ import {
   InputContainer,
   Label,
   Input,
+  Select,
   RegisterButton,
   ErrorMsg,
 } from './style'
+
 const topicsList = [
   {
     id: 'ARTS_AND_CULTURE',
@@ -38,8 +40,14 @@ const topicsList = [
 const Register = props => (
   <RegisterContext.Consumer>
     {value => {
-      const {name, topic, changeName, showError, registerName, updateError} =
-        value
+      const {
+        name,
+        topic,
+        changeName,
+        showError,
+        registerName,
+        updateError,
+      } = value
 
       const submiitRegistration = event => {
         event.preventDefault()
@@ -66,25 +74,25 @@ const Register = props => (
           <div>
             <RegisterContainer>
               <RegisterImg
-                src='https://assets.ccbp.in/frontend/react-js/meetup/website-register-img.png'
-                alt='website register'
+                src="https://assets.ccbp.in/frontend/react-js/meetup/website-register-img.png"
+                alt="website register"
               />
 
-              <Form onSubmit={submiitRegistration}>
+              <From onSubmit={submiitRegistration}>
                 <RegisterHeading>Let us join</RegisterHeading>
-                <Label htmlFor='name'>Name</Label>
+                <Label htmlFor="name">NAME</Label>
                 <InputContainer>
                   <Input
-                    id='name'
+                    id="name"
                     value={name}
-                    type='text'
+                    type="text"
                     onChange={onChangeName}
-                    placeholder='your name'
+                    placeholder="your name"
                   />
                 </InputContainer>
                 <InputContainer>
-                  <Label htmlFor='topic'>Topic</Label>
-                  <Select id='topic' value={topic} onChange={onChangeTopic}>
+                  <Label htmlFor="topic">Topic</Label>
+                  <Select id="topic" value={topic} onChange={onChangeTopic}>
                     {topicsList.map(each => (
                       <option value={each.id} key={each.id}>
                         {each.displayText}
@@ -92,13 +100,13 @@ const Register = props => (
                     ))}
                   </Select>
                 </InputContainer>
-                <RegisterButton type='submit'>Register Now</RegisterButton>
+                <RegisterButton type="submit">Register Now</RegisterButton>
                 {showError === true ? (
                   <ErrorMsg> please enter your name</ErrorMsg>
                 ) : (
                   ''
                 )}
-              </Form>
+              </From>
             </RegisterContainer>
           </div>
         </div>

@@ -14,18 +14,23 @@ class App extends Component {
     isRegistered: false,
     showError: false,
   }
+
   changeName = name => {
     this.setState({name})
   }
+
   changeTopic = topic => {
     this.setState({topic})
   }
+
   registerName = () => {
     this.setState({isRegistered: true})
   }
+
   updateError = () => {
     this.setState({showError: true})
   }
+
   render() {
     const {name, topic, isRegistered, showError} = this.state
     return (
