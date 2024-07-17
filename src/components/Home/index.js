@@ -28,8 +28,8 @@ const Home = props => {
             <Header />
             {isRegistered === true ? (
               <HomeContainer>
-                <Name>Hello{name}</Name>
-                <Topic> Welcome to{topic}</Topic>
+                <Name>Hello {name} </Name>
+                <Topic> Welcome to {topic}</Topic>
                 <Image
                   src="https://assets.ccbp.in/frontend/react-js/meetup/meetup-img.png"
                   alt="meetup"
