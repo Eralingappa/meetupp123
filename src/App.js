@@ -47,8 +47,9 @@ class App extends Component {
         }}
       >
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="register" component={Register} />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/register' component={Register} />
+
           <NotFound />
         </Switch>
       </RegisterContext.Provider>
