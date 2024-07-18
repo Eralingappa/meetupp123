@@ -40,10 +40,10 @@ const topicsList = [
 const Register = props => (
   <RegisterContext.Consumer>
     {value => {
-      const {name, topic, changeName, showError, registerName, updateError} =
+      const {name, topic, changeName, showError, registerName, updateError,} =
         value
 
-      const submiitRegistration = event => {
+      const submitRegistration = event => {
         event.preventDefault()
 
         if (name !== '' && topic !== '') {
@@ -59,7 +59,7 @@ const Register = props => (
       }
 
       const onChangeTopic = event => {
-        onChangeTopic(event.target.value)
+        changeTopic(event.target.value)
       }
 
       return (
@@ -68,20 +68,20 @@ const Register = props => (
           <div>
             <RegisterContainer>
               <RegisterImg
-                src="https://assets.ccbp.in/frontend/react-js/meetup/website-register-img.png"
-                alt="website register"
+                src='https://assets.ccbp.in/frontend/react-js/meetup/website-register-img.png'
+                alt='website register'
               />
 
-              <From onSubmit={submiitRegistration}>
+              <From onSubmit={submitRegistration}>
                 <RegisterHeading>Let us join</RegisterHeading>
-                <Label htmlFor="name">NAME</Label>
+                <Label htmlFor='name'>NAME</Label>
                 <InputContainer>
                   <Input
-                    id="name"
+                    id='name'
                     value={name}
-                    type="text"
+                    type='text'
                     onChange={onChangeName}
-                    placeholder="your name"
+                    placeholder='your name'
                   />
                 </InputContainer>
                 <InputContainer>
@@ -94,7 +94,7 @@ const Register = props => (
                     ))}
                   </Select>
                 </InputContainer>
-                <RegisterButton type="submit">Register Now</RegisterButton>
+                <RegisterButton type='submit'>Register Now </RegisterButton>
                 {showError === true ? (
                   <ErrorMsg> please enter your name</ErrorMsg>
                 ) : (
